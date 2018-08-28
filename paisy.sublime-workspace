@@ -1,0 +1,1001 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"date_inter",
+				"date_interval_create_from_date_string"
+			],
+			[
+				"YiiFormat",
+				"yii\\i18n\\Formatter"
+			],
+			[
+				"fiscal_",
+				"fiscal_year_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "backend/controllers/TrxController.php",
+			"settings":
+			{
+				"buffer_size": 3142,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/views/trx/index.php",
+			"settings":
+			{
+				"buffer_size": 1037,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/views/trx/view.php",
+			"settings":
+			{
+				"buffer_size": 1266,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common/models/AccountingPeriod.php",
+			"settings":
+			{
+				"buffer_size": 2023,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common/models/FiscalYear.php",
+			"settings":
+			{
+				"buffer_size": 2125,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common/models/Trxdetail.php",
+			"settings":
+			{
+				"buffer_size": 1283,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/controllers/FiscalYearController.php",
+			"settings":
+			{
+				"buffer_size": 6444,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "paisy.sublime-project",
+			"settings":
+			{
+				"buffer_size": 214,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/views/fiscal-year/view.php",
+			"settings":
+			{
+				"buffer_size": 1414,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/views/accounting-period/index.php",
+			"settings":
+			{
+				"buffer_size": 979,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend/views/accounting-period/view.php",
+			"settings":
+			{
+				"buffer_size": 1237,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common/models/Trx.php",
+			"settings":
+			{
+				"buffer_size": 1817,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "|+| \"$dateFormat\"\n",
+			"settings":
+			{
+				"buffer_size": 18,
+				"line_ending": "Windows",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> D:\\xampp\\htdocs\\paisy\\backend\\controllers\\FiscalYearController.php\n\t|+| 172\n",
+			"settings":
+			{
+				"buffer_size": 79,
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"xdebug setting",
+				"Preferences: Xdebug Settings – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gs",
+				"Git: Show"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"gin",
+				"Git: Init"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – Syntax Specific – User"
+			],
+			[
+				"gitini",
+				"Git: Init"
+			],
+			[
+				"init",
+				"Git: Init"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/paisy",
+		"/D/xampp/htdocs/paisy/backend",
+		"/D/xampp/htdocs/paisy/backend/controllers",
+		"/D/xampp/htdocs/paisy/backend/views",
+		"/D/xampp/htdocs/paisy/backend/views/fiscal-year",
+		"/D/xampp/htdocs/paisy/common",
+		"/D/xampp/htdocs/paisy/common/models"
+	],
+	"file_history":
+	[
+		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/D/xampp/htdocs/paisy/backend/config/main.php",
+		"/D/xampp/htdocs/paisy/backend/config/main-local.php",
+		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/User/PHP.sublime-settings",
+		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/Terminal/Base File.sublime-settings",
+		"/D/xampp/htdocs/paisy/backend/views/fund/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/fund/update.php",
+		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/index.php",
+		"/D/xampp/htdocs/paisy/common/models/FiscalYear.php",
+		"/D/xampp/htdocs/paisy/common/models/Balance.php",
+		"/D/xampp/htdocs/paisy/common/models/Trx.php",
+		"/D/xampp/htdocs/paisy/common/models/Trxdetail2017.php",
+		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/update.php",
+		"/D/xampp/htdocs/paisy/backend/controllers/SiteController.php",
+		"/D/xampp/htdocs/paisy/backend/views/fund/index.php",
+		"/D/xampp/htdocs/paisy/frontend/config/main.php",
+		"/D/xampp/htdocs/paisy/backend/views/coa/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/entity/update.php",
+		"/D/xampp/htdocs/paisy/common/models/Entity.php",
+		"/D/xampp/htdocs/paisy/common/models/Func.php",
+		"/D/xampp/htdocs/paisy/backend/views/func/index.php",
+		"/D/xampp/htdocs/paisy/backend/views/func/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/layouts/main.php",
+		"/D/xampp/htdocs/paisy/backend/views/fund/_form.php",
+		"/D/xampp/htdocs/paisy/backend/views/entity/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/entity/index.php",
+		"/D/xampp/htdocs/paisy/common/models/CoaGrouping.php",
+		"/D/xampp/htdocs/paisy/backend/views/coa/index.php",
+		"/D/xampp/htdocs/paisy/backend/views/coa-grouping/update.php",
+		"/D/xampp/htdocs/paisy/backend/views/coa-grouping/index.php",
+		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/D/xampp/htdocs/paisy/backend/views/coa-grouping/view.php",
+		"/D/xampp/htdocs/paisy/common/config/main-local.php",
+		"/D/xampp/htdocs/paisy/common/config/main.php",
+		"/D/xampp/htdocs/paisy/common/config/params-local.php",
+		"/D/xampp/htdocs/paisy/common/config/params.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lable"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "backend/controllers/TrxController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1134.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "backend/views/trx/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								387,
+								387
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "backend/views/trx/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "common/models/AccountingPeriod.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1888,
+								1888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "common/models/FiscalYear.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1507,
+								1980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "common/models/Trxdetail.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								982,
+								982
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "backend/controllers/FiscalYearController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5968,
+								5968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2908.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "paisy.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 28.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "backend/views/fiscal-year/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								959,
+								959
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "backend/views/accounting-period/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								376,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "backend/views/accounting-period/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "common/models/Trx.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 14,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 79,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "paisy.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"13":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"14":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"15":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"19":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"20":
+				{
+					"group": 0,
+					"index": 8
+				},
+				"21":
+				{
+					"group": 0,
+					"index": 9
+				},
+				"22":
+				{
+					"group": 0,
+					"index": 10
+				},
+				"23":
+				{
+					"group": 0,
+					"index": 11
+				},
+				"26":
+				{
+					"group": 0,
+					"index": 7
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

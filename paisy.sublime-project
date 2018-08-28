@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings": 
+	{
+        "xdebug": {
+             "url": "http://localhost/paisy/backend/web/index.php",
+        }
+    }
+}
