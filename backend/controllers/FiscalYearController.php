@@ -54,8 +54,16 @@ class FiscalYearController extends Controller
      */
     public function actionView($id)
     {
+
+        $model = $this->findModel($id);
+        $accountingPeriods = new ActiveDataProvider([
+            'query' => AccountingPeriod::find()->where(['fiscal_year_id'=>$id]),
+            //'query' => $model->getAccountingPeriods(),
+        ]);
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'accountingPeriods' => $accountingPeriods,
         ]);
     }
 
@@ -168,22 +176,29 @@ class FiscalYearController extends Controller
     }
 
     public function actionCreateAccountingPeriods($id) {
-        
-        $dateFormat = 'php:'. Yii::$app->user->identity->date_format;
-        $yiiFormatter = Yii::$app->formatter;
-        $sdate = $this->findModel($id)->fiscal_year . '-07-01';
-        $edate = $this->findModel($id)->fiscal_year . '-07-31';
-        for ($i = 1; $i < 13; $i++) {
-            $accounting_period = new AccountingPeriod();
-            $accounting_period->fiscal_year_id = $id;
-            $accounting_period->period = $i;
-            $accounting_period->start_date = $yiiFormatter->asDate($sdate, $dateFormat);
-            $accounting_period->end_date = $yiiFormatter->asDate($edate, $dateFormat);
-            $accounting_period->is_closed = false;
-            $accounting_period->save();
-            $sdate = date_create($yiiFormatter->asDate($sdate, 'yyyy-MM-dd'))->add(date_interval_create_from_date_string('P1M'));
-            $edate = date_create($sdate->format('Y') .'-'. $sdate->format('m') .'-'. $sdate->format('t'));
+
+        $model->$this->findModel($id);
+        if ($model->accountingPeriods->count() == 0) {
+            $dateFormat = Yii::$app->user->identity->date_format;
+            $sdate = date_create($this->findModel($id)->fiscal_year . '/07/01');
+            $edate = date_create($sdate->format('Y').$sdate->format('m').$sdate->format('t'));
+            for ($i = 1; $i < 13; $i++) {
+                $accounting_period = new AccountingPeriod();
+                $accounting_period->fiscal_year_id = $id;
+                $accounting_period->period = $i;
+                $accounting_period->start_date = $sdate->format($dateFormat);
+                $accounting_period->end_date = $edate->format($dateFormat);
+                $accounting_period->is_closed = false;
+                $accounting_period->save(false);
+                $sdate->modify('+1 month');
+                $edate = date_create($sdate->format('Y') .'-'. $sdate->format('m') .'-'. $sdate->format('t'));
+            }
+
+        } else {
+            Yii::$app->session->setFlash('error', "Accounting Periods already created for Financial Year ".$model->fiscal_year);
         }
+
+        $this->actionView($id);
     }
     
 }

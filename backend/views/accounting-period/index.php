@@ -24,11 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'fiscal_year.fiscal_year',
+            'fiscalYear.fiscal_year',
             'period',
             'start_date',
             'end_date',
-            'is_closed',
+            'is_closed:boolean',
             'created_by',
             'created_at',
             'updated_by',

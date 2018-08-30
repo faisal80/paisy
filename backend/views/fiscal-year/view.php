@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\FiscalYear */
@@ -24,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Create Accounting Periods', ['create-accounting-periods', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+        
     </p>
 
     <?= DetailView::widget([
@@ -41,5 +42,34 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at:datetime',
         ],
     ]) ?>
+
+    <p>
+        <h2><?= Html::encode('Accounting Periods for Financial Year ' . $model->fiscal_year) ?></h2>
+        <?php 
+            if ($accountingPeriods->totalCount === 0) {
+                echo Html::a('Create Accounting Periods', ['create-accounting-periods', 'id' => $model->id], ['class' => 'btn btn-success']);
+            }
+        ?>
+    </p>
+
+    <?= GridView::widget([
+        'dataProvider' => $accountingPeriods,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'fiscalYear.fiscal_year',
+            'period',
+            'start_date',
+            'end_date',
+            'is_closed:boolean',
+            'created_by',
+            'created_at',
+            'updated_by',
+            'updated_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 
 </div>

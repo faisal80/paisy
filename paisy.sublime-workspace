@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"error",
+				"error_reporting"
+			],
+			[
 				"date_inter",
 				"date_interval_create_from_date_string"
 			],
@@ -20,37 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "backend/controllers/TrxController.php",
+			"file": "backend/controllers/FiscalYearController.php",
 			"settings":
 			{
-				"buffer_size": 3142,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/views/trx/index.php",
-			"settings":
-			{
-				"buffer_size": 1037,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/views/trx/view.php",
-			"settings":
-			{
-				"buffer_size": 1266,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "common/models/AccountingPeriod.php",
-			"settings":
-			{
-				"buffer_size": 2023,
+				"buffer_size": 6933,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -65,28 +42,10 @@
 			}
 		},
 		{
-			"file": "common/models/Trxdetail.php",
+			"file": "backend/views/accounting-period/index.php",
 			"settings":
 			{
-				"buffer_size": 1283,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/controllers/FiscalYearController.php",
-			"settings":
-			{
-				"buffer_size": 6444,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "paisy.sublime-project",
-			"settings":
-			{
-				"buffer_size": 214,
+				"buffer_size": 986,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -95,79 +54,17 @@
 			"file": "backend/views/fiscal-year/view.php",
 			"settings":
 			{
-				"buffer_size": 1414,
+				"buffer_size": 2154,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "backend/views/accounting-period/index.php",
+			"file": "backend/controllers/AccountingPeriodController.php",
 			"settings":
 			{
-				"buffer_size": 979,
-				"encoding": "UTF-8",
+				"buffer_size": 3324,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "backend/views/accounting-period/view.php",
-			"settings":
-			{
-				"buffer_size": 1237,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "common/models/Trx.php",
-			"settings":
-			{
-				"buffer_size": 1817,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows",
-				"name": "Xdebug Context",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "|+| \"$dateFormat\"\n",
-			"settings":
-			{
-				"buffer_size": 18,
-				"line_ending": "Windows",
-				"name": "Xdebug Watch",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows",
-				"name": "Xdebug Stack",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "=> D:\\xampp\\htdocs\\paisy\\backend\\controllers\\FiscalYearController.php\n\t|+| 172\n",
-			"settings":
-			{
-				"buffer_size": 79,
-				"line_ending": "Windows",
-				"name": "Xdebug Breakpoint",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
@@ -182,6 +79,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"github",
+				"Git: Push Current Branch"
+			],
+			[
+				"gitcom",
+				"Git: Commit"
+			],
+			[
+				"gitad",
+				"Git: Add All"
+			],
 			[
 				"xdebug setting",
 				"Preferences: Xdebug Settings – Default"
@@ -243,6 +152,7 @@
 		"/D/xampp/htdocs/paisy/backend",
 		"/D/xampp/htdocs/paisy/backend/controllers",
 		"/D/xampp/htdocs/paisy/backend/views",
+		"/D/xampp/htdocs/paisy/backend/views/accounting-period",
 		"/D/xampp/htdocs/paisy/backend/views/fiscal-year",
 		"/D/xampp/htdocs/paisy/common",
 		"/D/xampp/htdocs/paisy/common/models"
@@ -250,6 +160,19 @@
 	"file_history":
 	[
 		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/D/xampp/htdocs/date.php",
+		"/D/xampp/htdocs/paisy/common/models/AccountingPeriod.php",
+		"/D/xampp/htdocs/paisy/common/models/FiscalYear.php",
+		"/D/xampp/htdocs/paisy/backend/views/accounting-period/view.php",
+		"/D/xampp/htdocs/paisy/backend/controllers/TrxController.php",
+		"/D/xampp/htdocs/paisy/backend/views/trx/index.php",
+		"/D/xampp/htdocs/paisy/backend/views/trx/view.php",
+		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/view.php",
+		"/D/xampp/htdocs/paisy/paisy.sublime-project",
+		"/D/xampp/htdocs/paisy/common/models/Trx.php",
+		"/D/xampp/htdocs/paisy/backend/views/accounting-period/index.php",
+		"/D/xampp/htdocs/paisy/common/models/Trxdetail.php",
 		"/D/xampp/htdocs/paisy/backend/config/main.php",
 		"/D/xampp/htdocs/paisy/backend/config/main-local.php",
 		"/C/Users/SHAH/AppData/Roaming/Sublime Text 3/Packages/User/PHP.sublime-settings",
@@ -257,11 +180,8 @@
 		"/D/xampp/htdocs/paisy/backend/views/fund/view.php",
 		"/D/xampp/htdocs/paisy/backend/views/fund/update.php",
 		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/index.php",
-		"/D/xampp/htdocs/paisy/common/models/FiscalYear.php",
 		"/D/xampp/htdocs/paisy/common/models/Balance.php",
-		"/D/xampp/htdocs/paisy/common/models/Trx.php",
 		"/D/xampp/htdocs/paisy/common/models/Trxdetail2017.php",
-		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/view.php",
 		"/D/xampp/htdocs/paisy/backend/views/fiscal-year/update.php",
 		"/D/xampp/htdocs/paisy/backend/controllers/SiteController.php",
 		"/D/xampp/htdocs/paisy/backend/views/fund/index.php",
@@ -321,24 +241,24 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "backend/controllers/TrxController.php",
+					"file": "backend/controllers/FiscalYearController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3142,
+						"buffer_size": 6933,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26,
-								26
+								1266,
+								1284
 							]
 						],
 						"settings":
@@ -348,104 +268,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1134.0,
+						"translation.y": 928.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "backend/views/trx/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1037,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								387,
-								387
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "backend/views/trx/view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1266,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								212,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "common/models/AccountingPeriod.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2023,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1888,
-								1888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "common/models/FiscalYear.php",
 					"semi_transient": false,
 					"settings":
@@ -457,8 +287,8 @@
 						"selection":
 						[
 							[
-								1507,
-								1980
+								2016,
+								2016
 							]
 						],
 						"settings":
@@ -468,145 +298,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 972.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "common/models/Trxdetail.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								982,
-								982
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 486.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "backend/controllers/FiscalYearController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6444,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5968,
-								5968
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2908.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "paisy.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								193,
-								193
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 28.0,
-						"translation.y": 0.0,
+						"translation.y": 1242.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "backend/views/fiscal-year/view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								959,
-								959
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
+					"buffer": 2,
 					"file": "backend/views/accounting-period/index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 979,
+						"buffer_size": 986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								376,
-								462
+								284,
+								330
 							]
 						],
 						"settings":
@@ -614,162 +326,6 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 162.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "backend/views/accounting-period/view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1004,
-								1004
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "common/models/Trx.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 756.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 12,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18,
-								18
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 14,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -779,31 +335,63 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 3,
+					"file": "backend/views/fiscal-year/view.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 79,
+						"buffer_size": 2154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								79,
-								79
+								1484,
+								1626
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "backend/controllers/AccountingPeriodController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -824,32 +412,18 @@
 			[
 				0,
 				0,
-				2,
+				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
-			],
-			[
-				1,
-				1,
-				2,
-				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.7,
 			1.0
 		]
 	},
@@ -857,6 +431,14 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 126.0
+	},
+	"output.git-push":
+	{
+		"height": 126.0
 	},
 	"output.xdebug":
 	{
@@ -909,60 +491,25 @@
 					"group": 0,
 					"index": 0
 				},
-				"14":
-				{
-					"group": 0,
-					"index": 1
-				},
-				"15":
-				{
-					"group": 0,
-					"index": 2
-				},
 				"16":
-				{
-					"group": 0,
-					"index": 3
-				},
-				"17":
 				{
 					"group": 0,
 					"index": 4
 				},
-				"18":
-				{
-					"group": 0,
-					"index": 5
-				},
 				"19":
 				{
 					"group": 0,
-					"index": 6
+					"index": 1
 				},
 				"20":
 				{
 					"group": 0,
-					"index": 8
-				},
-				"21":
-				{
-					"group": 0,
-					"index": 9
+					"index": 2
 				},
 				"22":
 				{
 					"group": 0,
-					"index": 10
-				},
-				"23":
-				{
-					"group": 0,
-					"index": 11
-				},
-				"26":
-				{
-					"group": 0,
-					"index": 7
+					"index": 3
 				}
 			},
 			"restore_layout":
