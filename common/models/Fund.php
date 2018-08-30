@@ -46,7 +46,7 @@ class Fund extends \common\models\MyActiveRecord
     {
         return [
             'id' => 'ID',
-            'fund_id' => 'Fund ID',
+            'fund_id' => 'Parent Fund',
             'fund_name' => 'Fund Name',
             'source' => 'Source',
             'remarks' => 'Remarks',
