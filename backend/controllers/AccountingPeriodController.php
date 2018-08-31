@@ -124,4 +124,8 @@ class AccountingPeriodController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    
+    public function getCurrentAccountingPeriod() {
+        return AccountingPeriod::findOne(['is_closed' => false]);
+    }
 }

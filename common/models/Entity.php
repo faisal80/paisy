@@ -75,4 +75,8 @@ class Entity extends \common\models\MyActiveRecord
     {
         return $this->hasMany(Entity::className(), ['entity_id'=>'id']);
     }
+    
+    public function getTrxes() {
+        return $this->hasMany(Trx::className(), ['entity_id' => 'id']);
+    }
 }

@@ -54,4 +54,8 @@ class Trxdetail extends \common\models\MyActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+    
+    public function getTrx() {
+        return $this->hasOne(Trx::className(), ['id'=>'trx_id']);
+    }
 }

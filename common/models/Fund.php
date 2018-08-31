@@ -79,4 +79,8 @@ class Fund extends \common\models\MyActiveRecord
     public function getChildren() {
         return $this->hasMany(Fund::className(), ['fund_id'=>'id']);
     }
+    
+    public function getTrxes() {
+        return $this->hasMany(Trx::className(), ['fund_id' => 'id']);
+    }
 }

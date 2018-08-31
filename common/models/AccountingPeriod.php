@@ -82,4 +82,13 @@ class AccountingPeriod extends \common\models\MyActiveRecord
     public function getFiscalYear() {
         return $this->hasOne(FiscalYear::className(), ['id' => 'fiscal_year_id']);
     }
+    
+    public function getTrxes() {
+        return $this->hasMany(Trx::className(), ['accounting_period_id' => 'id']);
+    }
+    
+    public function getAccountingPeriod() {
+        return $this->period . '/' . $this->fiscalYear->fiscal_year;
+    }
+    
 }

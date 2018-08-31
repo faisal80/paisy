@@ -72,4 +72,8 @@ class Func extends \common\models\MyActiveRecord
     public function getChildren() {
         return $this->hasMany(Func::className(), ['func_id'=>'id']);
     }
+    
+    public function getTrxes() {
+        return $this->hasMany(Trx::className(), ['func_id' => 'id']);
+    }
 }

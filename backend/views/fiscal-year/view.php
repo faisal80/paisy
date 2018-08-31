@@ -63,10 +63,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'start_date',
             'end_date',
             'is_closed:boolean',
-            'created_by',
-            'created_at',
-            'updated_by',
-            'updated_at',
+            'createdby.username:text:Created by',
+            'created_at:datetime',
+            'updatedby.username:text:Updated by',
+            'updated_at:datetime',
 
             [
                 'class' => 'yii\grid\ActionColumn',

@@ -68,4 +68,20 @@ class Trx extends \common\models\MyActiveRecord
     public function getTrxdetail() {
         return $this->hasMany(Trxdetail::className(), ['trx_id'=>'id']);
     }
+    
+    public function getAccountingPeriod() {
+        return $this->hasOne(AccountingPeriod::className(), ['id'=>'accounting_period_id']);
+    }
+    
+    public function getEntity() {
+        return $this->hasOne(Entity::className(), ['id' => 'entity_id']);
+    }
+    
+    public function getFunc() {
+        return $this->hasOne(Func::className(), ['id' => 'func_id']);
+    }
+    
+    public function getFund() {
+        return $this->hasOne(Fund::className(), ['id' => 'fund_id']);
+    }
 }

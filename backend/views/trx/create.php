@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Trx */
 
-$this->title = 'Create Trx';
-$this->params['breadcrumbs'][] = ['label' => 'Trxes', 'url' => ['index']];
+$this->title = 'Create Transaction';
+$this->params['breadcrumbs'][] = ['label' => 'Transactions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="trx-create">
