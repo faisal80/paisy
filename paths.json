@@ -1,0 +1,10 @@
+{
+    "aliases": {
+        "@yii"              : ["vendor/yiisoft/yii2"],
+        "@common"           : ["common"],
+        "@backend"          : ["backend"],
+        "@frontend"         : ["frontend"],
+        "@console"          : ["console"],
+        "@vendor"           : ["vendor"]
+    }
+}
