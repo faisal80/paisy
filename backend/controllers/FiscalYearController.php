@@ -177,8 +177,8 @@ class FiscalYearController extends Controller
 
     public function actionCreateAccountingPeriods($id) {
 
-        $model->$this->findModel($id);
-        if ($model->accountingPeriods->count() == 0) {
+        $model = $this->findModel($id);
+        if (!$model->getAccountingPeriods()->exists()) {
             $dateFormat = Yii::$app->user->identity->date_format;
             $sdate = date_create($this->findModel($id)->fiscal_year . '/07/01');
             $edate = date_create($sdate->format('Y').$sdate->format('m').$sdate->format('t'));
@@ -188,7 +188,7 @@ class FiscalYearController extends Controller
                 $accounting_period->period = $i;
                 $accounting_period->start_date = $sdate->format($dateFormat);
                 $accounting_period->end_date = $edate->format($dateFormat);
-                $accounting_period->is_closed = false;
+                $accounting_period->is_closed = true;
                 $accounting_period->save(false);
                 $sdate->modify('+1 month');
                 $edate = date_create($sdate->format('Y') .'-'. $sdate->format('m') .'-'. $sdate->format('t'));
@@ -198,7 +198,7 @@ class FiscalYearController extends Controller
             Yii::$app->session->setFlash('error', "Accounting Periods already created for Financial Year ".$model->fiscal_year);
         }
 
-        $this->actionView($id);
+        return $this->redirect(['view', 'id'=>$id]);
     }
     
 }

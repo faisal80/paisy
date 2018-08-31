@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\AccountingPeriod */
 
-$this->title = $model->id;
+$this->title = 'Accounting Period : '.$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Accounting Periods', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -30,15 +30,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'fiscal_year.fiscal_year',
+            'fiscalYear.fiscal_year',
             'period',
             'start_date',
             'end_date',
-            'is_closed',
-            'created_by',
-            'created_at',
-            'updated_by',
-            'updated_at',
+            'is_closed:boolean',
+            'createdby.username:text:Created by',
+            'created_at:datetime',
+            'updatedby.username:text:Updated by',
+            'updated_at:datetime',
         ],
     ]) ?>
 

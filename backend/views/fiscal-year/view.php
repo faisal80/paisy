@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <h2><?= Html::encode('Accounting Periods for Financial Year ' . $model->fiscal_year) ?></h2>
         <?php 
-            if ($accountingPeriods->totalCount === 0) {
+            if($accountingPeriods->totalCount === 0) {
                 echo Html::a('Create Accounting Periods', ['create-accounting-periods', 'id' => $model->id], ['class' => 'btn btn-success']);
             }
         ?>
@@ -68,7 +68,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_by',
             'updated_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'controller' => 'accounting-period',
+            ],
         ],
     ]); ?>
 
