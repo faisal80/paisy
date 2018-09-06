@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Trx;
+use common\models\Trxdetail;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -64,14 +65,47 @@ class TrxController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Trx();
+//        $model = new Trx();
+        $trxModel = new Trx();
+        $trxdetailModels = [new Trxdetail()];
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($trxModel->load(Yii::$app->request->post())) {
+        
+            $trxdetailModels = Model::createMultiple(Trxdetail::className());
+
+            Model::loadMultiple($trxdetailModels, Yii::$app->request->post());
+
+            // validate all models
+            $valid = $trxModel->validate();
+            $valid = Model::validateMultiple($trxdetailModels) && $valid;
+
+            if ($valid) {
+                $transaction = \Yii::$app->db->beginTransaction();
+
+                try {
+                    if ($flag = $trxModel->save(false)) {
+                        foreach ($trxdetailModels as $trxdetailModel) {
+                            $trxdetailModel->trx_id = $trxModel->id;
+                            if (! ($flag = $trxdetailModel->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    }
+
+                    if ($flag) {
+                        $transaction->commit();
+                        return $this->redirect(['view', 'id' => $trxModel->id]);
+                    }
+                } catch (Exception $e) {
+                    $transaction->rollBack();
+                }
+            }
         }
-
+            
         return $this->render('create', [
-            'model' => $model,
+            'trxModel' => $trxModel,
+            'trxdetailModels'=> (empty($trxdetailModels)) ? [new Trxdetail()] : $trxdetailModels,
         ]);
     }
 
