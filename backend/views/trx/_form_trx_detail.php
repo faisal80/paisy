@@ -8,6 +8,11 @@ use yii\web\JsExpression;
 //use app\modules\yii2extensions\models\Image;
 use wbraganca\dynamicform\DynamicFormWidget;
 
+/* @var $this yii\web\View */
+/* @var $trxModel common\models\Trx */
+/* @var $trxdetailModels commom\models\Trxdetail */
+/* @var $form yii\widgets\ActiveForm */
+
 ?>
 
 <div id="panel-option-values" class="panel panel-default">
@@ -19,14 +24,15 @@ use wbraganca\dynamicform\DynamicFormWidget;
         'widgetContainer' => 'dynamicform_wrapper',
         'widgetBody' => '.form-options-body',
         'widgetItem' => '.form-options-item',
-        'min' => 1,
+        'min' => 2,
         'insertButton' => '.add-item',
         'deleteButton' => '.delete-item',
-        'model' => $modelsOptionValue[0],
+        'model' => $trxdetailModels[0],
         'formId' => 'dynamic-form',
         'formFields' => [
-            'name',
-            'img'
+            'coa_id',
+            'debit',
+            'credit'
         ],
     ]); ?>
 
@@ -34,58 +40,32 @@ use wbraganca\dynamicform\DynamicFormWidget;
         <thead>
             <tr>
                 <th style="width: 90px; text-align: center"></th>
-                <th class="required">Option value name</th>
-                <th style="width: 188px;">Image</th>
+                <th class="required">Head of Account</th>
+                <th style="width: 188px;">Debit</th>
+                <th style="width: 188px;">Credit</th>
                 <th style="width: 90px; text-align: center">Actions</th>
             </tr>
         </thead>
         <tbody class="form-options-body">
-            <?php foreach ($modelsOptionValue as $index => $modelOptionValue): ?>
+            <?php foreach ($trxdetailModels as $index => $trxdetailModel): ?>
                 <tr class="form-options-item">
                     <td class="sortable-handle text-center vcenter" style="cursor: move;">
                         <i class="fa fa-arrows"></i>
                     </td>
                     <td class="vcenter">
-                        <?= $form->field($modelOptionValue, "[{$index}]name")->label(false)->textInput(['maxlength' => 128]); ?>
+                        <?= $form->field($trxdetailModel, "[{$index}]coa_id")->label(false)->textInput(['maxlength' => 128]); ?>
                     </td>
                     <td>
-                        <?php if (!$modelOptionValue->isNewRecord): ?>
-                            <?= Html::activeHiddenInput($modelOptionValue, "[{$index}]id"); ?>
-                            <?= Html::activeHiddenInput($modelOptionValue, "[{$index}]image_id"); ?>
-                            <?= Html::activeHiddenInput($modelOptionValue, "[{$index}]deleteImg"); ?>
+                        <?php if (!$trxdetailModel->isNewRecord): ?>
+                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]id"); ?>
+                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]coa_id"); ?>
+                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]deleteTrxdetail"); ?>
                         <?php endif; ?>
-                         <?php
-                            $modelImage = Image::findOne(['id' => $modelOptionValue->image_id]);
-                            $initialPreview = [];
-                            if ($modelImage) {
-                                $pathImg = Yii::$app->fileStorage->baseUrl . '/' . $modelImage->path;
-                                $initialPreview[] = Html::img($pathImg, ['class' => 'file-preview-image']);
-                            }
-                        ?>
-                        <?= $form->field($modelOptionValue, "[{$index}]img")->label(false)->widget(FileInput::classname(), [
-                            'options' => [
-                                'multiple' => false,
-                                'accept' => 'image/*',
-                                'class' => 'optionvalue-img'
-                            ],
-                            'pluginOptions' => [
-                                'previewFileType' => 'image',
-                                'showCaption' => false,
-                                'showUpload' => false,
-                                'browseClass' => 'btn btn-default btn-sm',
-                                'browseLabel' => ' Pick image',
-                                'browseIcon' => '<i class="glyphicon glyphicon-picture"></i>',
-                                'removeClass' => 'btn btn-danger btn-sm',
-                                'removeLabel' => ' Delete',
-                                'removeIcon' => '<i class="fa fa-trash"></i>',
-                                'previewSettings' => [
-                                    'image' => ['width' => '138px', 'height' => 'auto']
-                                ],
-                                'initialPreview' => $initialPreview,
-                                'layoutTemplates' => ['footer' => '']
-                            ]
-                        ]) ?>
-                       
+
+                        <?= $form->field($trxdetailModel, "[{$index}]debit")->label(false)->textInput(); ?>
+                    </td>
+                    <td>
+                        <?= $form->field($trxdetailModel, "[{$index}]credit")->label(false)->textInput(); ?>
                     </td>
                     <td class="text-center vcenter">
                         <button type="button" class="delete-item btn btn-danger btn-xs"><i class="fa fa-minus"></i></button>
@@ -96,7 +76,7 @@ use wbraganca\dynamicform\DynamicFormWidget;
         <tfoot>
             <tr>
                 <td colspan="3"></td>
-                <td><button type="button" class="add-item btn btn-success btn-sm"><span class="fa fa-plus"></span> New</button></td>
+                <td><button type="button" class="add-item btn btn-success btn-sm"><span class="fa fa-plus"></span> New Line</button></td>
             </tr>
         </tfoot>
     </table>
@@ -105,16 +85,6 @@ use wbraganca\dynamicform\DynamicFormWidget;
 
 <?php
 $js = <<<'EOD'
-
-$(".optionvalue-img").on("filecleared", function(event) {
-    var regexID = /^(.+?)([-\d-]{1,})(.+)$/i;
-    var id = event.target.id;
-    var matches = id.match(regexID);
-    if (matches && matches.length === 4) {
-        var identifiers = matches[2].split("-");
-        $("#optionvalue-" + identifiers[1] + "-deleteimg").val("1");
-    }
-});
 
 var fixHelperSortable = function(e, ui) {
     ui.children().each(function() {
