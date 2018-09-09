@@ -2,30 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use wbraganca\dynamicform\DynamicFormWidget;
+
+
 
 /* @var $this yii\web\View */
 /* @var $trxModel common\models\Trx */
 /* @var $trxdetailModels commom\models\Trxdetail */
 /* @var $form yii\widgets\ActiveForm */
-/*
-$js = '
-jQuery(".dynamicform_wrapper").on("afterInsert", function(e, item) {
-    jQuery(".dynamicform_wrapper .panel-title-address").each(function(index) {
-        jQuery(this).html("Address: " + (index + 1))
-    });
-});
 
-jQuery(".dynamicform_wrapper").on("afterDelete", function(e) {
-    jQuery(".dynamicform_wrapper .panel-title-address").each(function(index) {
-        jQuery(this).html("Address: " + (index + 1))
-    });
-});
-';
-
-$this->registerJs($js);
- * 
- */
 ?>
 
 <div class="trx-form">

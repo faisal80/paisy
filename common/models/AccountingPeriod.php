@@ -48,7 +48,7 @@ class AccountingPeriod extends \common\models\MyActiveRecord
         return [
             'id' => 'ID',
             'fiscal_year_id' => 'Fiscal Year',
-            'period' => 'Period',
+            'period' => 'Accounting Period',
             'start_date' => 'Start Date',
             'end_date' => 'End Date',
             'is_closed' => 'Closed',

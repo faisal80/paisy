@@ -8,7 +8,11 @@ use common\models\Trxdetail;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\widgets\ActiveForm;
+use common\models\Model;
 
 /**
  * TrxController implements the CRUD actions for Trx model.
@@ -53,8 +57,14 @@ class TrxController extends Controller
      */
     public function actionView($id)
     {
+        $trx = $this->findModel($id);
+        $trxdetail = new ActiveDataProvider([
+            'query' => $trx->getTrxdetail(),
+        ]);
+        
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'trx' => $trx,
+            'trxdetail' => $trxdetail,
         ]);
     }
 
@@ -67,13 +77,21 @@ class TrxController extends Controller
     {
 //        $model = new Trx();
         $trxModel = new Trx();
-        $trxdetailModels = [new Trxdetail()];
+        $trxdetailModels = [new Trxdetail];
 
         if ($trxModel->load(Yii::$app->request->post())) {
         
             $trxdetailModels = Model::createMultiple(Trxdetail::className());
-
             Model::loadMultiple($trxdetailModels, Yii::$app->request->post());
+
+            // ajax validation
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ArrayHelper::merge(
+                    ActiveForm::validateMultiple($trxdetailModels),
+                    ActiveForm::validate($trxModel)
+                );
+            }
 
             // validate all models
             $valid = $trxModel->validate();
@@ -81,18 +99,17 @@ class TrxController extends Controller
 
             if ($valid) {
                 $transaction = \Yii::$app->db->beginTransaction();
-
                 try {
                     if ($flag = $trxModel->save(false)) {
                         foreach ($trxdetailModels as $trxdetailModel) {
                             $trxdetailModel->trx_id = $trxModel->id;
-                            if (! ($flag = $trxdetailModel->save(false))) {
+
+                            if (($flag = $trxdetailModel->save(false)) === false) {
                                 $transaction->rollBack();
                                 break;
                             }
                         }
                     }
-
                     if ($flag) {
                         $transaction->commit();
                         return $this->redirect(['view', 'id' => $trxModel->id]);
@@ -102,10 +119,10 @@ class TrxController extends Controller
                 }
             }
         }
-            
+
         return $this->render('create', [
             'trxModel' => $trxModel,
-            'trxdetailModels'=> (empty($trxdetailModels)) ? [new Trxdetail()] : $trxdetailModels,
+            'trxdetailModels' => (empty($trxdetailModels)) ? [new Trxdetail] : $trxdetailModels
         ]);
     }
 
@@ -118,14 +135,63 @@ class TrxController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+        $trxModel = $this->findModel($id);
+        $trxdetailModels = $trxModel->trxdetail;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($trxModel->load(Yii::$app->request->post())) {
+
+            $oldIDs = ArrayHelper::map($trxdetailModels, 'id', 'id');
+            $trxdetailModels = Model::createMultiple(Trxdetail::classname(), $trxdetailModels);
+            Model::loadMultiple($trxdetailModels, Yii::$app->request->post());
+            $deletedIDs = array_diff($oldIDs, array_filter(ArrayHelper::map($trxdetailModels, 'id', 'id')));
+
+            // ajax validation
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ArrayHelper::merge(
+                    ActiveForm::validateMultiple($trxdetailModels),
+                    ActiveForm::validate($trxModel)
+                );
+            }
+
+            // validate all models
+            $valid = $trxModel->validate();
+            $valid = Model::validateMultiple($trxdetailModels) && $valid;
+
+            if ($valid) {
+                $transaction = \Yii::$app->db->beginTransaction();
+                try {
+                    if ($flag = $trxModel->save(false)) {
+
+                        if (!empty($deletedIDs)) {
+                            $flag = Trxdetail::deleteByIDs($deletedIDs);
+                        }
+
+                        if ($flag) {
+                            foreach ($trxdetailModels as $trxdetailModel) {
+                                $trxdetailModel->trx_id = $trxModel->id;
+                                if (($flag = $trxdetailModel->save(false)) === false) {
+                                    $transaction->rollBack();
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if ($flag) {
+                        $transaction->commit();
+                        return $this->redirect(['view', 'id' => $trxModel->id]);
+                    }
+
+                } catch (Exception $e) {
+                    $transaction->rollBack();
+                }
+            }
         }
 
         return $this->render('update', [
-            'model' => $model,
+            'trxModel' => $trxModel,
+            'trxdetailModels' => (empty($trxdetailModels)) ? [new Trxdetail] : $trxdetailModels
         ]);
     }
 

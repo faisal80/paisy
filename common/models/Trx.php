@@ -64,6 +64,25 @@ class Trx extends \common\models\MyActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+    
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+
+        // ...custom code here...
+        $this->fixDate($this, 'trx_date');
+        
+        return true;
+    }    
+    
+    public function afterFind() {
+        parent::afterFind();
+        
+        $this->fixDate($this, 'trx_date', false);
+    }    
+
 
     public function getTrxdetail() {
         return $this->hasMany(Trxdetail::className(), ['trx_id'=>'id']);

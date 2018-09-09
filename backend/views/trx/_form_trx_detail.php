@@ -59,7 +59,8 @@ use wbraganca\dynamicform\DynamicFormWidget;
                         <?php if (!$trxdetailModel->isNewRecord): ?>
                             <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]id"); ?>
                             <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]coa_id"); ?>
-                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]deleteTrxdetail"); ?>
+                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]debit"); ?>
+                            <?= Html::activeHiddenInput($trxdetailModel, "[{$index}]credit"); ?>
                         <?php endif; ?>
 
                         <?= $form->field($trxdetailModel, "[{$index}]debit")->label(false)->textInput(); ?>

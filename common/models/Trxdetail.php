@@ -33,7 +33,7 @@ class Trxdetail extends \common\models\MyActiveRecord
     public function rules()
     {
         return [
-            [['coa_id', 'trx_id', 'amount', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
+            [['coa_id', 'trx_id', 'debit','credit', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
         ];
     }
 
@@ -57,5 +57,9 @@ class Trxdetail extends \common\models\MyActiveRecord
     
     public function getTrx() {
         return $this->hasOne(Trx::className(), ['id'=>'trx_id']);
+    }
+    
+    public function getCoa() {
+        return $this->hasOne(Coa::className(), ['id' => 'coa_id']);
     }
 }

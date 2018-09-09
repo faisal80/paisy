@@ -2,11 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Trx */
+/* @var $trx common\models\Trx */
+/* @var $trxdetail common\models\Trxdetail */
 
-$this->title = $model->id;
+$this->title = $trx->id;
 $this->params['breadcrumbs'][] = ['label' => 'Transactions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -16,8 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Transaction', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Update', ['update', 'id' => $trx->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $trx->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -27,22 +29,43 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
-        'model' => $model,
+        'model' => $trx,
         'attributes' => [
             'id',
-            'accounting_period_id',
+            'accountingPeriod.accountingPeriod:text:Accounting Period',
             'description',
             'trx_date',
             'amount',
-            'balanced',
-            'entity_id',
-            'func_id',
-            'fund_id',
-            'created_by',
-            'created_at',
-            'updated_by',
-            'updated_at',
+            'balanced:boolean',
+            'entity.entity_name',
+            'func.func_name',
+            'fund.fund_name',
+            'createdby.username:text:Created by',
+            'created_at:datetime',
+            'updatedby.username:text:Updated by',
+            'updated_at:datetime',
         ],
     ]) ?>
 
+        <?= GridView::widget([
+        'dataProvider' => $trxdetail,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'coa.headofaccount:text:Head of Account',
+            [
+                'attribute' => 'debit',
+                'format' => 'currency',
+                'footer' => $trxdetail->query->sum('debit'),
+            ],
+            'credit:currency',
+            'createdby.username:text:Created by',
+            'created_at:datetime',
+            'updatedby.username:text:Updated by',
+            'updated_at:datetime',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 </div>
