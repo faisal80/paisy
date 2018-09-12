@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="coa-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!--<h1><?= Html::encode($this->title) ?></h1>-->
 
     <p>
         <?= Html::a('Create Head of Account', ['create'], ['class' => 'btn btn-success']) ?>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'code',
             'title',
             'account_type',
-            'parent.title:text:Parent Account',
+            'parent.headofaccount:text:Parent Account',
             'remarks',
             'createdby.username:text:Created by',
             'created_at:datetime',
