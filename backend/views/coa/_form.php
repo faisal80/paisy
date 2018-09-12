@@ -19,9 +19,9 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'account_type')->dropDownList(['Asset' => 'Asset',
-                                                    'Liability' => 'Liability',
-                                                    'Receipt' => 'Receipt',
-                                                    'Expense' => 'Expense']) ?>
+                                                        'Liability' => 'Liability',
+                                                        'Receipt' => 'Receipt',
+                                                        'Expense' => 'Expense']) ?>
 
     <?= $form->field($model, 'coa_id')->dropDownList(\common\models\Coa::getAll(), ['prompt'=>'Select Parent Head of Account (if Applicable)']) ?>
 

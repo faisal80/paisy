@@ -52,7 +52,7 @@ class Coa extends \common\models\MyActiveRecord
             'code' => 'Code',
             'title' => 'Title',
             'account_type' => 'Account Type',
-            'coa_id' => 'Coa ID',
+            'coa_id' => 'Parent Account',
             'remarks' => 'Remarks',
             'created_by' => 'Created By',
             'created_at' => 'Created At',
