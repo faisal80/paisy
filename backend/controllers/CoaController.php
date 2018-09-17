@@ -135,10 +135,10 @@ class CoaController extends Controller
     {
         $result = [];
         $coas = Coa::find()->where(['code'=>['A','B','C','E','F','G']])->all();
-        foreach($coas as $coa) {
-            $result = [$coa];
+        foreach($coas as $index => $coa) {
+            $result[$index] = $coa;
             if ($coa->getChildren()->exists()) {
-                $result[] = $this->children($coa);
+                $result[$index][] = $this->children($coa);
             }
         }
         $this->render('coa',['data'=> $result]);
@@ -146,13 +146,16 @@ class CoaController extends Controller
     
     protected function children($model)
     {
+        $result = [];
 //        $children = $model->children;
         if ($model->getChildren()->exists()) {
             foreach ($model->children as $child) {
-                return [$this->children($child)];
+                $result[] = $child;
+                return $this->children($child);
             }
         } else {
-            return [$model];
+            $result[]= $model;
+            return $result;
         }
         
     }

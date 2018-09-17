@@ -102,4 +102,8 @@ class Coa extends \common\models\MyActiveRecord
     {
         return $this->hasMany(Coa::className(), ['coa_id'=>'id']);
     }
+    
+    public function getMajorObjects() {
+        return $this->hasMany(Coa::className(), ['coa_id'=>'id'])
+    }
 }
