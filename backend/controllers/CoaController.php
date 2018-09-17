@@ -126,7 +126,10 @@ class CoaController extends Controller
     }
     
     /**
-     * 
+     * A - Expenditure
+     * A01 - ERE
+     * A011 - Pay
+     * A01101 - Basic Pay
      */
     public function actionCoa() 
     {
