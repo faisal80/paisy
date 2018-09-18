@@ -105,5 +105,37 @@ class Coa extends \common\models\MyActiveRecord
     
     public function getMajorObjects() {
         return $this->hasMany(Coa::className(), ['coa_id'=>'id'])
+                ->where(['=','LENGTH(code)',3]);
     }
+    
+    public function getMajorObject() {
+        return $this->hasOne(Coa::className(), ['id'=>'coa_id'])
+                ->where(['=','LENGTH(code)', 3]);
+    }
+    
+    public function getMinorObjects() {
+        return $this->hasMany(Coa::className(), ['coa_id'=>'id'])
+                ->where(['=','LENGTH(code)',4]);
+    }
+    
+    public function getMinorObject() {
+        return $this->hasOne(Coa::className(), ['id'=>'coa_id'])
+                ->where(['=','LENGTH(code)', 4]);
+    }
+
+    public function getDetailedObjects() {
+        return $this->hasMany(Coa::className(), ['coa_id'=>'id'])
+                ->where(['>','LENGTH(code)',4]);
+    }
+    
+    public function getDetailedObject() {
+        return $this->hasOne(Coa::className(), ['id'=>'coa_id'])
+                ->where(['>','LENGTH(code)', 4]);
+    }
+    
+    public function getElement() {
+        return $this->hasOne(Coa::className(), ['id'=>'coa_id'])
+                ->where(['=', 'LENGTH(code)', 1]);
+    }
+    
 }

@@ -5,4 +5,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var_dump($data);
+
+foreach ($data as $value) {
+    echo $value->element->code. '/'. 
+            $value->majorObject->code.'/'.
+            $value->minorObject->code.'/'.
+            $value->code . '<br>';
+
+}
