@@ -74,7 +74,7 @@ class Coa extends \common\models\MyActiveRecord
      */
     public function getAll()
     {
-        $result = Coa::find()->all();
+        $result = Coa::find()->orderBy('code')->all();
         return \yii\helpers\ArrayHelper::map($result, 'id', 'Headofaccount');
     }
     
@@ -100,7 +100,8 @@ class Coa extends \common\models\MyActiveRecord
      */
     public function getChildren()
     {
-        return $this->hasMany(Coa::className(), ['coa_id'=>'id']);
+        return $this->hasMany(Coa::className(), ['coa_id'=>'id'])
+                ->orderBy('code');
     }
     
     public function getMajorObjects() {
