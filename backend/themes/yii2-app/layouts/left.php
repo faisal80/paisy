@@ -36,7 +36,8 @@
                     ['label' => 'Funds', 'icon' => 'dashboard', 'url' => ['/fund']],
                     ['label' => 'Chart of Accounts', 'icon' => 'dashboard', 'url' => ['/coa'], 'items'=>[
                         ['label'=>'Head of Accounts', 'icon'=>'dashboard', 'url'=>['/coa']],
-                        ['label'=>'Grouping of Heads', 'icon'=>'dashboard', 'url'=> ['/coa-grouping']]
+                        ['label'=>'Grouping of Heads', 'icon'=>'dashboard', 'url'=> ['/coa-grouping']],
+                        ['label'=>'Chart of Accounts', 'icon'=>'dashboard', 'url'=>['/coa/coa']]
                     ]],
                     ['label' => 'Fiscal Year', 'icon' => 'dashboard', 'url' => ['/fiscal-year']],
                     ['label' => 'Accounting Periods', 'icon'=>'dashboard', 'url'=> ['/accounting-period']],
