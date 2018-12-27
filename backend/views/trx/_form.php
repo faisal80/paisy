@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\Func;
+use common\models\Fund;
+use common\models\Entity;
 
 
 
@@ -46,13 +49,13 @@ use yii\widgets\ActiveForm;
         </div>
 
         <div class="col-sm-2">
-            <?= $form->field($trxModel, 'entity_id')->textInput() ?>
+            <?= $form->field($trxModel, 'entity_id')->dropDownList(Entity::getAll()) ?>
         </div>
         <div class="col-sm-2">
-            <?= $form->field($trxModel, 'func_id')->textInput() ?>
+            <?= $form->field($trxModel, 'func_id')->dropDownList(Func::getAll()) ?>
         </div>
         <div class="col-sm-2">
-            <?= $form->field($trxModel, 'fund_id')->textInput() ?>
+            <?= $form->field($trxModel, 'fund_id')->dropDownList(Fund::getAll()) ?>
         </div>
     </div>
 
