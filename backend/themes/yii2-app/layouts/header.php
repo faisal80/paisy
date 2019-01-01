@@ -230,9 +230,18 @@ use yii\helpers\Html;
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                        if (Yii::$app->user->isGuest) {
-                            <span class="hidden-xs">Login</span>
+                        <?php 
+                        if (Yii::$app->user->isGuest) { 
+                            echo Html::a('Login', ['/site/login']);
+                        } else { 
+                            Html::beginForm(['/site/logout'], 'post');
+                                Html::submitButton(
+                                        'Logout (' . Yii::$app->user->identity->username . ')',
+                                        ['class' => 'btn btn-link logout']
+                                );
+                            Html::endForm();
                         }
+                        ?><!--                            <span class="hidden-xs">Login</span>-->
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
