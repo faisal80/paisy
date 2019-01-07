@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $trxdetailModels common\models\Trxdetail */
 
 $this->title = 'Update Trx: ' . $trxModel->id;
-$this->params['breadcrumbs'][] = ['label' => 'Trxes', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Transaction', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $trxModel->id, 'url' => ['view', 'id' => $trxModel->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

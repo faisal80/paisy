@@ -7,6 +7,7 @@ use yii\web\JsExpression;
 //use kartik\widgets\FileInput;
 //use app\modules\yii2extensions\models\Image;
 use wbraganca\dynamicform\DynamicFormWidget;
+use common\models\Coa;
 
 /* @var $this yii\web\View */
 /* @var $trxModel common\models\Trx */
@@ -53,7 +54,7 @@ use wbraganca\dynamicform\DynamicFormWidget;
                         <i class="fa fa-arrows"></i>
                     </td>
                     <td class="vcenter">
-                        <?= $form->field($trxdetailModel, "[{$index}]coa_id")->label(false)->textInput(['maxlength' => 128]); ?>
+                        <?= $form->field($trxdetailModel, "[{$index}]coa_id")->label(false)->dropDownList(Coa::getAll()); ?>
                     </td>
                     <td>
                         <?php if (!$trxdetailModel->isNewRecord): ?>
