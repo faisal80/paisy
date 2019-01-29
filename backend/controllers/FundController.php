@@ -124,4 +124,27 @@ class FundController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    
+    /**
+     * Tree of Fund models
+     * 
+     */
+    public function actionFundTree() 
+    {
+        $funds = Fund::find()->where(['fund_id'=>null])->orderBy('id')->all();
+        $result = $this->children($funds);
+        return $this->render('fund-tree',['data'=> $result]);
+    }
+    
+    protected function children($models)
+    {
+        $result = [];
+        foreach ($models as $model) {
+            $result[] = $model;
+            if ($model->getChildren()->exists()) {
+                $result[] = $this->children($model->children);
+            }
+        }
+        return $result;
+    }
 }

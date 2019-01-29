@@ -31,9 +31,18 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Admin Menu', 'options' => ['class' => 'header'], 'visible' =>(Yii::$app->user->identity->username == 'admin' ? true : false)],
-                    ['label' => 'Entities', 'icon' => 'file-code-o', 'url' => ['/entity']],
-                    ['label' => 'Functions', 'icon' => 'dashboard', 'url' => ['/func']],
-                    ['label' => 'Funds', 'icon' => 'dashboard', 'url' => ['/fund']],
+                    ['label' => 'Entities', 'icon' => 'file-code-o', 'url' => ['/entity'], 'items'=>[
+                        ['label'=>'Entities', 'icon'=>'file-code-o', 'url' => ['/entity']],
+                        ['label'=>'Entity Tree', 'icon'=>'tree', 'url'=>['/entity/entity-tree']],
+                    ]],
+                    ['label' => 'Functions', 'icon' => 'dashboard', 'url' => ['/func'], 'items'=>[
+                        ['label'=>'Functions', 'icon'=>'dashboard','url'=>['/func']],
+                        ['label'=>'Function Tree','icon'=>'tree','url'=>['/func/func-tree']],
+                    ]],
+                    ['label' => 'Funds', 'icon' => 'dashboard', 'url' => ['/fund'],'items'=>[
+                        ['label'=>'Funds', 'icon'=>'dashboard','url'=>['/fund']],
+                        ['label'=>'Fund Tree','icon'=>'tree','url'=>['/fund/fund-tree']],
+                    ]],
                     ['label' => 'Chart of Accounts', 'icon' => 'dashboard', 'url' => ['/coa'], 'items'=>[
                         ['label'=>'Head of Accounts', 'icon'=>'dashboard', 'url'=>['/coa']],
                         ['label'=>'Grouping of Heads', 'icon'=>'dashboard', 'url'=> ['/coa-grouping']],

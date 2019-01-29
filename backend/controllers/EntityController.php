@@ -124,4 +124,28 @@ class EntityController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    
+    /**
+     * Tree of Entity models
+     * 
+     */
+    public function actionEntityTree() 
+    {
+        $entities = Entity::find()->where(['entity_id'=>null])->orderBy('id')->all();
+        $result = $this->children($entities);
+        return $this->render('entity-tree',['data'=> $result]);
+    }
+    
+    protected function children($models)
+    {
+        $result = [];
+        foreach ($models as $model) {
+            $result[] = $model;
+            if ($model->getChildren()->exists()) {
+                $result[] = $this->children($model->children);
+            }
+        }
+        return $result;
+    }
+    
 }

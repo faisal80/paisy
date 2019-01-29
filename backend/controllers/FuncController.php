@@ -124,4 +124,27 @@ class FuncController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    
+    /**
+     * Tree of Function models
+     * 
+     */
+    public function actionFuncTree() 
+    {
+        $funcs = Func::find()->where(['func_id'=>null])->orderBy('id')->all();
+        $result = $this->children($funcs);
+        return $this->render('func-tree',['data'=> $result]);
+    }
+    
+    protected function children($models)
+    {
+        $result = [];
+        foreach ($models as $model) {
+            $result[] = $model;
+            if ($model->getChildren()->exists()) {
+                $result[] = $this->children($model->children);
+            }
+        }
+        return $result;
+    }
 }

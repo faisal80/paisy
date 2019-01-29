@@ -92,6 +92,15 @@ class TrxController extends Controller
                     ActiveForm::validate($trxModel)
                 );
             }
+            
+            //if sums of debit and credit are equal 
+            $sumDr = $sumCr = 0;
+            foreach ($trxdetailModels as $trxdetailModel) {
+                $sumDr += $trxdetailModel->debit;
+                $sumCr += $trxdetailModel->credit;
+            }
+            
+            if ($sumDr == $sumCr) $trxModel->balanced = true;
 
             // validate all models
             $valid = $trxModel->validate();
@@ -144,6 +153,20 @@ class TrxController extends Controller
             $trxdetailModels = Model::createMultiple(Trxdetail::classname(), $trxdetailModels);
             Model::loadMultiple($trxdetailModels, Yii::$app->request->post());
             $deletedIDs = array_diff($oldIDs, array_filter(ArrayHelper::map($trxdetailModels, 'id', 'id')));
+            
+            //if sums of debit and credit are equal 
+            $sumDr = $sumCr = 0;
+            foreach ($trxdetailModels as $trxdetailModel) {
+                $sumDr += $trxdetailModel->debit;
+                $sumCr += $trxdetailModel->credit;
+            }
+            
+            if ($sumDr == $sumCr) {
+                $trxModel->balanced = true;
+            } else {
+                $trxModel->balanced = false;
+            }
+
 
             // ajax validation
             if (Yii::$app->request->isAjax) {
