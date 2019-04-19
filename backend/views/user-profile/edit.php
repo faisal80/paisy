@@ -2,20 +2,21 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
-$this->registerJS('$("form input:text, form textarea").first().focus();', yii\web\View::POS_READY);
+use yii\jui\DatePicker;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\CoaGrouping */
+/* @var $model common\models\User */
 /* @var $form yii\widgets\ActiveForm */
-?>
 
-<div class="coa-grouping-form">
+$this->title = 'Edit User Profile';
+?>
+<h1><?= $this->title ?></h1>
+
+<div class="fiscal-year-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'group_name')->textInput(['maxlength' => true]) ?>
-
+    <?= $form->field($model, 'date_format')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

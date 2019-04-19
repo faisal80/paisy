@@ -105,6 +105,32 @@ class FiscalYearController extends Controller
                     'updated_by' => $mig->integer(11),
                     'updated_at' => $mig->integer(11),
                 ]);
+                
+                $mig->createTable('budget'.$model->fiscal_year,[
+                    'id'                   => $mig->primaryKey(),
+                    'reference_no'         => $mig->string(),
+                    'date'                 => $mig->date(),
+                    'accounting_period_id' => $mig->integer(),
+                    'entity_id'            => $mig->integer(),
+                    'func_id'              => $mig->integer(),
+                    'fund_id'              => $mig->integer(),
+                    'created_by'           => $mig->integer(11),
+                    'created_at'           => $mig->integer(11),
+                    'updated_by'           => $mig->integer(11),
+                    'updated_at'           => $mig->integer(11),
+                ]);
+                
+                $mig->createTable('budget_detail'.$model->fiscal_year, [
+                    'id'            => $mig->primaryKey(),
+                    'allocation'    => $mig->bigInteger(),
+                    'release'       => $mig->bigInteger(),
+                    'coa_id'        => $mig->integer(),
+                    'budget_id'     => $mig->integer(),
+                    'created_by'    => $mig->integer(11),
+                    'created_at'    => $mig->integer(11),
+                    'updated_by'    => $mig->integer(11),
+                    'updated_at'    => $mig->integer(11),
+                ]);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -130,6 +156,8 @@ class FiscalYearController extends Controller
                 $mig = new Migration();
                 $mig->renameTable('trx'.$oldValforfiscal_year, 'trx'.$model->fiscal_year);
                 $mig->renameTable('trxdetail'.$oldValforfiscal_year, 'trxdetail'.$model->fiscal_year);
+                $mig->renameTable('budget'.$oldValforfiscal_year, 'budget'.$model->fiscal_year);
+                $mig->renameTable('budget_detail'.$oldValforfiscal_year, 'budget_detail'.$model->fiscal_year);
             }            
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -152,7 +180,12 @@ class FiscalYearController extends Controller
         
         $mig = new Migration();
         $mig->dropTable('trx'.$model->fiscal_year);
+        $mig = new Migration();
         $mig->dropTable('trxdetail'.$model->fiscal_year);
+        $mig = new Migration();
+        $mig->dropTable('budget'.$model->fiscal_year);
+        $mig = new Migration();
+        $mig->dropTable('budget_detail'.$model->fiscal_year);
         
         $model->delete();
 

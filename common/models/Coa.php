@@ -37,6 +37,7 @@ class Coa extends \common\models\MyActiveRecord
         return [
             [['coa_grouping_id', 'coa_id', 'created_by', 'created_at', 'updated_by', 'updated_at'], 'integer'],
             [['code', 'account_type'], 'string', 'max' => 20],
+            [['code'], 'unique'],
             [['title', 'remarks'], 'string', 'max' => 255],
         ];
     }

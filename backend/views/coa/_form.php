@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+$this->registerJS('$("form input:text, form textarea").first().focus();', yii\web\View::POS_READY);
+
 /* @var $this yii\web\View */
 /* @var $model common\models\Coa */
 /* @var $form yii\widgets\ActiveForm */

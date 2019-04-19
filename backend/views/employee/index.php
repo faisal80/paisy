@@ -6,16 +6,16 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Fiscal Years';
+$this->title = 'Employees';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="fiscal-year-index">
+<div class="employee-index">
 
-    <!--<h1><?= Html::encode($this->title) ?></h1>-->
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
 
     <p>
-        <?= Html::a('Create Fiscal Year', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Employee', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -24,14 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'fiscal_year',
-            'start_date',
-            'end_date',
-            'is_closed:boolean',
-//            'createdby.username:text:Created by',
-//            'created_at:datetime',
-//            'updatedby.username:text:Updated by',
-//            'updated_at:datetime',
+            'employee_name',
+            'nic',
+            'date_of_birth',
+            'domicile',
+
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

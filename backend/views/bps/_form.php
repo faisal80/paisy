@@ -3,19 +3,22 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->registerJS('$("form input:text, form textarea").first().focus();', yii\web\View::POS_READY);
-
 /* @var $this yii\web\View */
-/* @var $model common\models\CoaGrouping */
+/* @var $model common\models\Bps */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="coa-grouping-form">
+<div class="bps-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'group_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'wef')->textInput() ?>
 
+    <?= $form->field($model, 'reference_no')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'date')->textInput() ?>
+    
+    <?= $form->field($model, 'department')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
