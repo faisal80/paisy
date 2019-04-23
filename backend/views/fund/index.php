@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'options' => [ 'style' => 'table-layout:fixed;' ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -27,11 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'parent.fund_name:text:Parent Fund',
             'fund_name',
             'source',
-            'remarks:ntext',
-            'createdby.username:text:Created by',
-            'created_at:datetime',
-            'updatedby.username:text:Updated by',
-            'updated_at:datetime',
+            'remarks',
+//            [
+//                'attribute'=> 'remarks',
+//                'contentOptions' => ['style'=>'width:20%'],
+//            ],
+
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

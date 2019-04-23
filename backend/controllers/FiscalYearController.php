@@ -110,7 +110,8 @@ class FiscalYearController extends Controller
                     'id'                   => $mig->primaryKey(),
                     'reference_no'         => $mig->string(),
                     'date'                 => $mig->date(),
-                    'accounting_period_id' => $mig->integer(),
+                    'start_date'           => $mig->date(),
+                    'end_date'             => $mig->date(),
                     'entity_id'            => $mig->integer(),
                     'func_id'              => $mig->integer(),
                     'fund_id'              => $mig->integer(),
@@ -180,11 +181,8 @@ class FiscalYearController extends Controller
         
         $mig = new Migration();
         $mig->dropTable('trx'.$model->fiscal_year);
-        $mig = new Migration();
         $mig->dropTable('trxdetail'.$model->fiscal_year);
-        $mig = new Migration();
         $mig->dropTable('budget'.$model->fiscal_year);
-        $mig = new Migration();
         $mig->dropTable('budget_detail'.$model->fiscal_year);
         
         $model->delete();

@@ -26,10 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'entity_name',
             'parent.entity_name:text:Parent Entity',
-            'createdby.username:text:Created by',
-            'created_at:datetime',
-            'updatedby.username:text:Updated by',
-            'updated_at:datetime',
+
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

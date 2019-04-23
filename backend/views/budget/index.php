@@ -20,16 +20,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'options' => [ 'style' => 'table-layout:fixed;' ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
             'reference_no',
             'date',
-            'accounting_period_id',
-            'entity_id',
-            //'func_id',
-            //'fund_id',
+            'start_date',
+            'end_date',
+            'entity.entity_name',
+            'func.func_name',
+            'fund.fund_name',
             //'created_by',
             //'created_at',
             //'updated_by',

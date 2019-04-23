@@ -16,21 +16,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'date')->textInput() ?>
 
-    <?= $form->field($model, 'accounting_period_id')->textInput() ?>
+    <?= $form->field($model, 'start_date')->textInput() ?>
+    
+    <?= $form->field($model, 'end_date')->textInput() ?>
 
-    <?= $form->field($model, 'entity_id')->textInput() ?>
+    <?= $form->field($model, 'entity_id')->dropDownList(\common\models\Entity::getAll()) ?>
 
-    <?= $form->field($model, 'func_id')->textInput() ?>
+    <?= $form->field($model, 'func_id')->dropDownList(\common\models\Func::getAll()) ?>
 
-    <?= $form->field($model, 'fund_id')->textInput() ?>
-
-    <?= $form->field($model, 'created_by')->textInput() ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_by')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <?= $form->field($model, 'fund_id')->dropDownList(\common\models\Fund::getAll()) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
