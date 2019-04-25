@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Entity', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Preview Tree', ['entity-tree'], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?= GridView::widget([

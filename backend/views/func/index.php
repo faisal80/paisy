@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Function', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Preview Tree', ['func-tree'], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,10 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'func_name',
             'parent.func_name:text:Parent Function',
-            'createdby.username:text:Created by',
-            'created_at:datetime',
-            'updatedby.username:text:Updated by',
-            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
